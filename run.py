@@ -42,7 +42,6 @@ def run(args):
 
 def parse_args():
     args = argparse.ArgumentParser()
-    args.add_argument('--model', type=str, choices=['gpt-4', 'gpt-3.5-turbo', 'luna-ai-llama2'], default='luna-ai-llama2')
     args.add_argument('--backend', type=str, choices=['gpt-4', 'gpt-3.5-turbo', 'luna-ai-llama2'], default='luna-ai-llama2')
     args.add_argument('--temperature', type=float, default=0.7)
 
