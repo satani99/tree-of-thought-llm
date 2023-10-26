@@ -17,15 +17,18 @@ def run(args):
 
     for i in range(args.task_start_index, args.task_end_index):
         # solve
+        print('solving...')
         if args.naive_run:
             ys, info = naive_solve(args, task, i) 
         else:
             ys, info = solve(args, task, i)
 
         # log
+        print('logging...')
         infos = [task.test_output(i, y) for y in ys]
         info.update({'idx': i, 'ys': ys, 'infos': infos, 'usage_so_far': gpt_usage(args.backend)})
         logs.append(info)
+        print('dumping...')
         with open(file, 'w') as f:
             json.dump(logs, f, indent=4)
         
