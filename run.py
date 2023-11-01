@@ -45,7 +45,7 @@ def run(args):
 
 def parse_args():
     args = argparse.ArgumentParser()
-    args.add_argument('--backend', type=str, choices=['gpt-4', 'gpt-3.5-turbo', 'luna-ai-llama2', 'llama2-7b', 'llama2-13b', 'zephyr'], default='llama2-7b')
+    args.add_argument('--backend', type=str, choices=['gpt-4', 'gpt-3.5-turbo', 'luna-ai-llama2', 'llama2-7b', 'llama2-13b', 'zephyr', 'llama-2-70b-chat', 'mistral-7b-instruct'], default='llama2-7b')
     args.add_argument('--temperature', type=float, default=0.7)
 
     args.add_argument('--task', type=str, required=True, choices=['game24', 'text', 'crosswords'])
